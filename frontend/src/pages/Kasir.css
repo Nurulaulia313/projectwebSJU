@@ -1,0 +1,2744 @@
+/* =====================================================
+
+   KASIR / PENJUALAN
+
+===================================================== */
+
+
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+
+.kasir-page {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+
+
+  display: grid;
+
+  grid-template-columns: 220px minmax(0, 1fr);
+
+  grid-template-rows: minmax(0, 1fr) 95px;
+
+
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+}
+
+
+
+/* =====================================================
+
+   SIDEBAR
+
+===================================================== */
+
+
+
+.kasir-sidebar {
+
+  grid-column: 1;
+
+  grid-row: 1;
+
+
+
+  width: 220px;
+
+  min-width: 220px;
+
+  min-height: 0;
+
+
+
+  display: flex;
+
+  flex-direction: column;
+
+
+
+  padding: 18px 10px 15px;
+
+
+
+  background: #0b1f3a;
+
+  color: #ffffff;
+
+}
+
+
+
+.kasir-brand {
+
+  height: 57px;
+
+  min-height: 57px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+
+
+  padding: 0 8px;
+
+}
+
+
+
+.kasir-brand img {
+
+  width: 48px;
+
+  height: 42px;
+
+  object-fit: contain;
+
+
+
+  /* Logo motor putih */
+
+  filter: brightness(0) invert(1);
+
+}
+
+
+
+.kasir-brand div {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+}
+
+
+
+.kasir-brand strong {
+
+  font-size: 13px;
+
+  white-space: nowrap;
+
+}
+
+
+
+.kasir-brand span {
+
+  font-size: 11px;
+
+}
+
+
+
+.kasir-sidebar-line {
+
+  height: 1px;
+
+  min-height: 1px;
+
+
+
+  background: #ffffff;
+
+
+
+  margin: 10px 8px 15px;
+
+}
+
+
+
+.kasir-menu {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+}
+
+
+
+.kasir-menu-item {
+
+  min-height: 38px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+
+
+  padding: 0 12px;
+
+
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+
+
+  border-radius: 5px;
+
+  transition: *background* 0.2s ease;
+
+}
+
+
+
+.kasir-menu-item svg {
+
+  flex-shrink: 0;
+
+}
+
+
+
+.kasir-menu-item:hover,
+
+.kasir-menu-item.active {
+
+  background: #087ff5;
+
+}
+
+
+
+/* =====================================================
+
+   ILUSTRASI SIDEBAR BAGIAN BAWAH
+
+===================================================== */
+
+
+
+.kasir-sidebar-decoration {
+
+  margin-top: auto;
+
+  min-height: 165px;
+
+
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+
+
+  text-align: center;
+
+  padding-bottom: 5px;
+
+}
+
+
+
+.kasir-sidebar-decoration img {
+
+  width: 115px;
+
+  height: 115px;
+
+
+
+  object-fit: contain;
+
+  margin-bottom: 5px;
+
+}
+
+
+
+.kasir-sidebar-decoration strong {
+
+  font-size: 10px;
+
+}
+
+
+
+.kasir-sidebar-decoration span {
+
+  font-size: 9px;
+
+  margin-top: 2px;
+
+}
+
+
+
+.kasir-sidebar-decoration div {
+
+  width: 45px;
+
+  height: 1px;
+
+
+
+  background: #ffffff;
+
+  margin-top: 8px;
+
+}
+
+
+
+/* =====================================================
+
+   MAIN CONTENT
+
+===================================================== */
+
+
+
+.kasir-main {
+
+  grid-column: 2;
+
+  grid-row: 1;
+
+
+
+  min-width: 0;
+
+  min-height: 0;
+
+
+
+  display: flex;
+
+  flex-direction: column;
+
+
+
+  background: #ffffff;
+
+}
+
+
+
+/* =====================================================
+
+   HEADER
+
+===================================================== */
+
+
+
+.kasir-header {
+
+  width: 100%;
+
+  height: 65px;
+
+  min-height: 65px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+
+
+  padding: 0 12px 0 18px;
+
+
+
+  border: 1px solid #dddddd;
+
+  background: #ffffff;
+
+}
+
+
+
+.kasir-header h1 {
+
+  margin: 0;
+
+
+
+  font-size: 29px;
+
+  font-weight: bold;
+
+}
+
+
+
+.kasir-header-right {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+}
+
+
+
+.kasir-notification {
+
+  width: 35px;
+
+  height: 35px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+
+
+  cursor: pointer;
+
+}
+
+
+
+.kasir-profile {
+
+  min-width: 135px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+
+
+  padding: 5px 9px;
+
+
+
+  background: #dddddd;
+
+  border-radius: 6px;
+
+}
+
+
+
+.kasir-profile-icon {
+
+  width: 30px;
+
+  height: 30px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  border: 1.5px solid #000000;
+
+  border-radius: 50%;
+
+}
+
+
+
+.kasir-profile-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+}
+
+
+
+.kasir-profile-text strong {
+
+  font-size: 12px;
+
+}
+
+
+
+.kasir-profile-text span {
+
+  font-size: 9px;
+
+}
+
+
+
+.kasir-profile-arrow {
+
+  font-size: 18px;
+
+}
+
+
+
+/* =====================================================
+
+   KONTEN HALAMAN
+
+===================================================== */
+
+
+
+.kasir-content {
+
+  flex: 1;
+
+  min-width: 0;
+
+
+
+  padding: 12px;
+
+}
+
+
+
+/* =====================================================
+
+   PANEL FILTER
+
+===================================================== */
+
+
+
+.kasir-filter-panel {
+
+  width: 100%;
+
+
+
+  background: #eeeeee;
+
+  border-radius: 6px;
+
+
+
+  padding: 12px;
+
+  margin-bottom: 8px;
+
+}
+
+
+
+.kasir-filter-heading {
+
+  width: 285px;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.kasir-filter-heading h2 {
+
+  margin: 0;
+
+
+
+  font-size: 21px;
+
+  line-height: 1.25;
+
+  font-weight: normal;
+
+}
+
+
+
+.kasir-filter-heading div {
+
+  width: 100%;
+
+  height: 1px;
+
+
+
+  background: #333333;
+
+  margin-top: 8px;
+
+}
+
+
+
+.kasir-filter-fields {
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr 0.85fr;
+
+  gap: 18px;
+
+
+
+  max-width: 850px;
+
+  margin-bottom: 7px;
+
+}
+
+
+
+.kasir-field {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+}
+
+
+
+.kasir-field label {
+
+  font-size: 19px;
+
+}
+
+
+
+.kasir-field input {
+
+  width: 100%;
+
+  height: 37px;
+
+
+
+  padding: 0 13px;
+
+
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 5px;
+
+
+
+  background: #d8d8d8;
+
+
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  color: #333333;
+
+}
+
+
+
+.kasir-field input::placeholder {
+
+  color: #888888;
+
+}
+
+
+
+.kasir-field input[readonly] {
+
+  cursor: default;
+
+}
+
+
+
+.kasir-search-row {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+
+.kasir-search-box {
+
+  flex: 1;
+
+  min-width: 0;
+
+  height: 37px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+
+
+  padding: 0 12px;
+
+
+
+  background: #d8d8d8;
+
+  border-radius: 5px;
+
+}
+
+
+
+.kasir-search-box svg {
+
+  flex-shrink: 0;
+
+}
+
+
+
+.kasir-search-box input {
+
+  width: 100%;
+
+  height: 100%;
+
+
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+}
+
+
+
+.kasir-search-box input::placeholder {
+
+  color: #777777;
+
+}
+
+
+
+.kasir-add-button {
+
+  min-width: 185px;
+
+  height: 37px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+
+
+  padding: 0 15px;
+
+
+
+  background: #168ee9;
+
+  color: #ffffff;
+
+
+
+  border: none;
+
+  border-radius: 5px;
+
+
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+
+
+  cursor: pointer;
+
+}
+
+
+
+.kasir-add-button:hover {
+
+  background: #0875cf;
+
+}
+
+
+
+/* =====================================================
+
+   PANEL TABEL
+
+===================================================== */
+
+
+
+.kasir-table-panel {
+
+  width: 100%;
+
+  min-height: 355px;
+
+
+
+  display: flex;
+
+  flex-direction: column;
+
+
+
+  padding: 10px 18px 15px;
+
+
+
+  background: #eeeeee;
+
+  border-radius: 6px;
+
+}
+
+
+
+.kasir-table-panel h2 {
+
+  margin: 0 0 8px;
+
+
+
+  font-size: 20px;
+
+}
+
+
+
+.kasir-table-wrapper {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+}
+
+
+
+.kasir-table {
+
+  width: 100%;
+
+
+
+  border-collapse: collapse;
+
+  table-layout: auto;
+
+
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 12px;
+
+  text-align: center;
+
+}
+
+
+
+.kasir-table thead {
+
+  background: #c5dce9;
+
+}
+
+
+
+.kasir-table th {
+
+  height: 36px;
+
+
+
+  padding: 7px 6px;
+
+
+
+  border: 1px solid #b6c8d3;
+
+
+
+  white-space: nowrap;
+
+}
+
+
+
+.kasir-table td {
+
+  height: 44px;
+
+
+
+  padding: 6px;
+
+
+
+  border-bottom: 1px solid #cccccc;
+
+  border-right: 1px solid #cccccc;
+
+
+
+  white-space: nowrap;
+
+}
+
+
+
+.kasir-table td:first-child {
+
+  border-left: 1px solid #cccccc;
+
+}
+
+
+
+.kasir-table tbody tr:hover {
+
+  background: #e2eaf0;
+
+}
+
+
+
+.kasir-empty {
+
+  height: 65px !important;
+
+
+
+  text-align: center;
+
+  color: #555555;
+
+}
+
+
+
+/* =====================================================
+
+   TOMBOL AKSI TABEL
+
+===================================================== */
+
+
+
+.kasir-action-buttons {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+}
+
+
+
+.kasir-action-buttons button {
+
+  height: 24px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+
+
+  padding: 0 7px;
+
+
+
+  border-radius: 5px;
+
+
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+}
+
+
+
+.kasir-action-edit {
+
+  color: #0875d1;
+
+  background: #b9dcf5;
+
+  border: none;
+
+}
+
+
+
+.kasir-action-delete {
+
+  color: #c90000;
+
+  background: #f3aaaa;
+
+  border: none;
+
+}
+
+
+
+.kasir-action-view {
+
+  min-width: 55px;
+
+
+
+  color: #0875e1;
+
+  background: transparent;
+
+
+
+  border: 1px solid #0875e1;
+
+}
+
+
+
+.kasir-action-edit:hover {
+
+  background: #a1d0f2;
+
+}
+
+
+
+.kasir-action-delete:hover {
+
+  background: #ed9292;
+
+}
+
+
+
+.kasir-action-view:hover {
+
+  background: #d7eaff;
+
+}
+
+
+
+/* =====================================================
+
+   FOOTER TABEL / PAGINATION
+
+===================================================== */
+
+
+
+.kasir-table-footer {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  gap: 10px;
+
+
+
+  margin-top: auto;
+
+  padding-top: 20px;
+
+
+
+  font-size: 12px;
+
+}
+
+
+
+.kasir-show-data {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+}
+
+
+
+.kasir-show-data select {
+
+  height: 28px;
+
+  min-width: 52px;
+
+
+
+  padding: 0 5px;
+
+
+
+  border: 1px solid #777777;
+
+  border-radius: 5px;
+
+
+
+  background: #ffffff;
+
+
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+}
+
+
+
+.kasir-data-info {
+
+  text-align: center;
+
+  font-size: 13px;
+
+}
+
+
+
+.kasir-pagination {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 5px;
+
+}
+
+
+
+.kasir-pagination button,
+
+.kasir-pagination span {
+
+  width: 32px;
+
+  height: 27px;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  border: 1px solid #777777;
+
+  border-radius: 5px;
+
+
+
+  background: #ffffff;
+
+
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+}
+
+
+
+.kasir-pagination button {
+
+  cursor: pointer;
+
+}
+
+
+
+.kasir-pagination button:disabled {
+
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+}
+
+
+
+.kasir-pagination span {
+
+  background: #b8d9ed;
+
+  font-weight: bold;
+
+}
+
+
+
+/* =====================================================
+
+   FOOTER UTAMA FULL WIDTH
+
+===================================================== */
+
+
+
+.kasir-footer {
+
+  grid-column: 1 / -1;
+
+  grid-row: 2;
+
+
+
+  width: 100%;
+
+  height: 95px;
+
+  min-height: 95px;
+
+
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+
+
+  padding: 0 30px;
+
+
+
+  background: #bdbdbd;
+
+  border: 1px solid #888888;
+
+}
+
+
+
+/* LOGO SEJUTA KIRI */
+
+
+
+.kasir-footer-left {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+}
+
+
+
+.kasir-footer-left img {
+
+  width: 70px;
+
+  height: 65px;
+
+
+
+  object-fit: contain;
+
+}
+
+
+
+/* LOGO MOTOR TENGAH */
+
+
+
+.kasir-footer-center {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+
+.kasir-footer-center img {
+
+  width: 55px;
+
+  height: 55px;
+
+
+
+  object-fit: contain;
+
+
+
+  /* Mengubah logo motor menjadi hitam */
+
+  filter: brightness(0);
+
+}
+
+
+
+/* NAMA BENGKEL KANAN */
+
+
+
+.kasir-footer-right {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+
+
+  gap: 1px;
+
+
+
+  font-size: 16px;
+
+}
+
+
+
+/* =====================================================
+
+   MODAL
+
+===================================================== */
+
+
+
+.kasir-modal-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+
+
+  padding: 20px;
+
+
+
+  background: rgba(0, 0, 0, 0.45);
+
+}
+
+
+
+.kasir-modal {
+
+  width: 100%;
+
+  max-width: 650px;
+
+  max-height: 90vh;
+
+
+
+  overflow-y: auto;
+
+
+
+  padding: 22px;
+
+
+
+  background: #ffffff;
+
+  border-radius: 9px;
+
+
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.kasir-modal-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+
+
+  padding-bottom: 12px;
+
+  margin-bottom: 18px;
+
+
+
+  border-bottom: 1px solid #dddddd;
+
+}
+
+
+
+.kasir-modal-header h2 {
+
+  margin: 0;
+
+  font-size: 22px;
+
+}
+
+
+
+.kasir-modal-header button {
+
+  display: flex;
+
+
+
+  border: none;
+
+  background: transparent;
+
+
+
+  cursor: pointer;
+
+}
+
+
+
+/* =====================================================
+
+   FORM MODAL
+
+===================================================== */
+
+
+
+.kasir-form-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+}
+
+
+
+.kasir-form-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+}
+
+
+
+.kasir-form-group label {
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+}
+
+
+
+.kasir-form-group input {
+
+  width: 100%;
+
+  height: 38px;
+
+
+
+  padding: 0 10px;
+
+
+
+  border: 1px solid #cccccc;
+
+  border-radius: 5px;
+
+  outline: none;
+
+
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+}
+
+
+
+.kasir-form-group input:focus {
+
+  border-color: #168ee9;
+
+}
+
+
+
+.kasir-form-group input[readonly] {
+
+  background: #eeeeee;
+
+}
+
+
+
+/* =====================================================
+
+   TOTAL PEMBAYARAN
+
+===================================================== */
+
+
+
+.kasir-total-box {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+
+
+  padding: 13px;
+
+  margin-top: 18px;
+
+
+
+  background: #e8f3fc;
+
+  border-radius: 5px;
+
+}
+
+
+
+.kasir-total-box span {
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+}
+
+
+
+.kasir-total-box strong {
+
+  font-size: 20px;
+
+  color: #0875cf;
+
+}
+
+
+
+/* =====================================================
+
+   TOMBOL MODAL
+
+===================================================== */
+
+
+
+.kasir-modal-actions {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 9px;
+
+
+
+  margin-top: 20px;
+
+}
+
+
+
+.kasir-modal-actions button,
+
+.kasir-modal-save {
+
+  min-height: 36px;
+
+
+
+  padding: 0 17px;
+
+
+
+  border-radius: 5px;
+
+
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+
+
+  cursor: pointer;
+
+}
+
+
+
+.kasir-modal-cancel {
+
+  background: #eeeeee;
+
+  border: 1px solid #cccccc;
+
+  color: #333333;
+
+}
+
+
+
+.kasir-modal-save {
+
+  background: #087cf0;
+
+  border: 1px solid #087cf0;
+
+  color: #ffffff;
+
+}
+
+
+
+.kasir-modal-save:hover {
+
+  background: #0667c8;
+
+}
+
+
+
+/* =====================================================
+
+   DETAIL TRANSAKSI
+
+===================================================== */
+
+
+
+.kasir-detail-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+
+}
+
+
+
+.kasir-detail-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+
+
+  padding: 11px 5px;
+
+
+
+  border-bottom: 1px solid #eeeeee;
+
+
+
+  font-size: 15px;
+
+}
+
+
+
+.kasir-detail-row span {
+
+  color: #555555;
+
+}
+
+
+
+.kasir-detail-row strong {
+
+  text-align: right;
+
+}
+
+
+
+.kasir-detail-total {
+
+  margin-top: 8px;
+
+  padding: 14px 10px;
+
+
+
+  background: #e8f3fc;
+
+  border-radius: 5px;
+
+
+
+  font-size: 17px;
+
+}
+
+
+
+.kasir-detail-total strong {
+
+  color: #0875cf;
+
+}
+
+
+
+.kasir-detail-content > .kasir-modal-save {
+
+  min-width: 100px;
+
+
+
+  margin-top: 18px;
+
+  align-self: flex-end;
+
+}
+
+
+
+/* =====================================================
+
+   RESPONSIVE
+
+===================================================== */
+
+
+
+@media (max-width: 1100px) {
+
+  .kasir-sidebar {
+
+    width: 190px;
+
+    min-width: 190px;
+
+  }
+
+
+
+  .kasir-page {
+
+    grid-template-columns: 190px minmax(0, 1fr);
+
+  }
+
+
+
+  .kasir-table-panel {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+
+  }
+
+
+
+  .kasir-table {
+
+    min-width: 950px;
+
+  }
+
+
+
+  .kasir-filter-fields {
+
+    max-width: 100%;
+
+  }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+  .kasir-page {
+
+    grid-template-columns: 65px minmax(0, 1fr);
+
+    grid-template-rows: minmax(0, 1fr) 75px;
+
+  }
+
+
+
+  .kasir-sidebar {
+
+    width: 65px;
+
+    min-width: 65px;
+
+    padding-left: 6px;
+
+    padding-right: 6px;
+
+  }
+
+
+
+  .kasir-brand {
+
+    justify-content: center;
+
+    padding: 0;
+
+  }
+
+
+
+  .kasir-brand img {
+
+    width: 42px;
+
+  }
+
+
+
+  .kasir-brand div,
+
+  .kasir-menu-item span,
+
+  .kasir-sidebar-decoration {
+
+    display: none;
+
+  }
+
+
+
+  .kasir-menu-item {
+
+    justify-content: center;
+
+    padding: 0;
+
+  }
+
+
+
+  .kasir-header {
+
+    padding: 0 12px;
+
+  }
+
+
+
+  .kasir-header h1 {
+
+    font-size: 21px;
+
+  }
+
+
+
+  .kasir-header-right {
+
+    gap: 8px;
+
+  }
+
+
+
+  .kasir-profile {
+
+    min-width: auto;
+
+    padding: 4px;
+
+  }
+
+
+
+  .kasir-profile-text,
+
+  .kasir-profile-arrow {
+
+    display: none;
+
+  }
+
+
+
+  .kasir-filter-fields {
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+  }
+
+
+
+  .kasir-filter-heading {
+
+    width: 100%;
+
+  }
+
+
+
+  .kasir-search-row {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+
+
+  .kasir-add-button {
+
+    width: 100%;
+
+  }
+
+
+
+  .kasir-table-footer {
+
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+  }
+
+
+
+  .kasir-data-info {
+
+    order: 3;
+
+  }
+
+
+
+  .kasir-pagination {
+
+    justify-content: center;
+
+  }
+
+
+
+  .kasir-footer {
+
+    height: 75px;
+
+    min-height: 75px;
+
+
+
+    padding: 0 10px;
+
+  }
+
+
+
+  .kasir-footer-left img {
+
+    width: 48px;
+
+  }
+
+
+
+  .kasir-footer-center img {
+
+    width: 40px;
+
+  }
+
+
+
+  .kasir-footer-right {
+
+    font-size: 12px;
+
+  }
+
+
+
+  .kasir-form-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+/* =====================================================
+   TOMBOL FILTER DI SAMPING SAMPAI TANGGAL
+===================================================== */
+
+.kasir-filter-fields {
+  grid-template-columns: 1.15fr 0.85fr 0.85fr auto;
+  gap: 12px;
+  align-items: end;
+  max-width: 100%;
+}
+
+.kasir-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 37px;
+  padding-bottom: 0;
+}
+
+.kasir-filter-button,
+.kasir-reset-button {
+  height: 37px;
+  min-width: 90px;
+  padding: 0 13px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.kasir-filter-button {
+  background: #168ee9;
+}
+
+.kasir-filter-button:hover {
+  background: #0875cf;
+}
+
+.kasir-reset-button {
+  background: #dc3545;
+}
+
+.kasir-reset-button:hover {
+  background: #bd2130;
+}
+
+@media (max-width: 1100px) {
+  .kasir-filter-fields {
+    grid-template-columns: 1.15fr 0.85fr 0.85fr auto;
+    gap: 8px;
+  }
+
+  .kasir-filter-actions {
+    gap: 5px;
+  }
+
+  .kasir-filter-button,
+  .kasir-reset-button {
+    min-width: 75px;
+    padding: 0 9px;
+  }
+}
+
+@media (max-width: 700px) {
+  .kasir-filter-fields {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .kasir-filter-actions {
+    height: auto;
+    padding-top: 2px;
+  }
+
+  .kasir-filter-button,
+  .kasir-reset-button {
+    flex: 1;
+  }
+}
+
+
+/* =====================================================
+   MODAL KASIR - FORM PENJUALAN MULTI BARANG
+===================================================== */
+.kasir-modal {
+  max-width: 708px;
+  padding: 0;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #d9d9d9;
+  border-radius: 6px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+}
+.kasir-modal-header {
+  min-height: 49px;
+  padding: 10px 28px;
+  margin: 0;
+  background: #087cf0;
+  border: 0;
+  color: #fff;
+}
+.kasir-modal-header h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+.kasir-modal-header button { color: #fff; }
+.kasir-pos-form { padding: 12px 30px 17px; }
+.kasir-pos-top-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+.kasir-pos-top-grid label,
+.kasir-pos-bottom > label {
+  display: grid;
+  grid-template-columns: 112px minmax(0,1fr);
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+.kasir-pos-top-grid input,
+.kasir-pos-top-grid select,
+.kasir-pos-bottom input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 33px;
+  padding: 0 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+}
+.kasir-pos-top-grid .kasir-pos-customer {
+  grid-column: 1 / -1;
+  grid-template-columns: 112px minmax(0,1fr);
+}
+.kasir-pos-detail-title {
+  margin-top: 7px;
+  padding: 4px 9px;
+  background: #acd2ed;
+  border: 1px solid #91bad8;
+  font-size: 14px;
+}
+.kasir-pos-table-wrap { overflow-x: auto; }
+.kasir-pos-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 13px;
+}
+.kasir-pos-table th {
+  padding: 5px 6px;
+  background: #acd2ed;
+  border: 1px solid #9bbbd1;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.kasir-pos-table td {
+  padding: 4px 6px;
+  border: 1px solid #d0d0d0;
+  text-align: center;
+  white-space: nowrap;
+}
+.kasir-pos-table select,
+.kasir-pos-table input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 65px;
+  height: 24px;
+  padding: 1px 5px;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  text-align: center;
+}
+.kasir-pos-table input[readonly] { background: #e5e5e5; }
+.kasir-pos-delete {
+  width: 42px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 3px;
+  background: #f19a9e;
+  color: #d71920;
+  cursor: pointer;
+}
+.kasir-pos-add-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+}
+.kasir-pos-add-row button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  border: 1px solid #087cf0;
+  border-radius: 5px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.kasir-pos-add-row small { font-size: 12px; }
+.kasir-pos-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: start;
+  gap: 18px;
+  margin-top: 8px;
+}
+.kasir-pos-bottom > label {
+  grid-template-columns: 126px minmax(0,1fr);
+  font-size: 14px;
+}
+.kasir-pos-summary {
+  padding: 8px;
+  border-radius: 5px;
+  background: #b4cfe1;
+  font-size: 14px;
+}
+.kasir-pos-summary > div,
+.kasir-pos-summary > label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 25px;
+}
+.kasir-pos-summary strong { font-weight: 400; }
+.kasir-pos-summary .kasir-pos-total {
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #5aa7dc;
+}
+.kasir-pos-summary > label { margin-top: 7px; }
+.kasir-pos-summary input {
+  width: 135px;
+  height: 26px;
+  padding: 0 6px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #fff;
+  font: inherit;
+  font-size: 13px;
+}
+.kasir-pos-summary .kasir-pos-change {
+  margin-top: 5px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: #7bc99b;
+}
+.kasir-pos-form .kasir-modal-actions {
+  justify-content: flex-start;
+  margin-top: 12px;
+  width: 100%;
+}
+.kasir-pos-form .kasir-modal-actions button {
+  min-width: 95px;
+  min-height: 27px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 400;
+}
+@media (max-width: 650px) {
+  .kasir-modal { max-width: calc(100vw - 24px); }
+  .kasir-pos-form { padding: 12px; }
+  .kasir-pos-top-grid, .kasir-pos-bottom { grid-template-columns: 1fr; }
+  .kasir-pos-top-grid .kasir-pos-customer { grid-column: auto; }
+  .kasir-pos-form .kasir-modal-actions { margin-top: 14px; width: 100%; }
+  .kasir-pos-top-grid label,
+  .kasir-pos-bottom > label { grid-template-columns: 112px minmax(0,1fr); }
+}
+
+
+/* PENYESUAIAN AKHIR MODAL AGAR MENYERUPAI REFERENSI */
+.kasir-modal-overlay {
+  background: rgba(255, 255, 255, 0.48) !important;
+  -webkit-backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
+  padding: 16px;
+}
+.kasir-modal {
+  width: 708px !important;
+  max-width: min(708px, calc(100vw - 32px)) !important;
+  max-height: calc(100vh - 32px) !important;
+  padding: 0 !important;
+  overflow-y: auto;
+  background: #d9d9d9 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+.kasir-modal-header {
+  min-height: 49px;
+  box-sizing: border-box;
+  padding: 9px 28px !important;
+  margin: 0 !important;
+  background: #087cf0 !important;
+  border: 0 !important;
+  color: white !important;
+}
+.kasir-modal-header h2 {
+  margin: 0 !important;
+  color: #fff !important;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px !important;
+  font-weight: bold;
+}
+.kasir-modal-header button { display: none !important; }
+.kasir-pos-form { padding: 12px 30px 17px !important; }
+.kasir-pos-top-grid {
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 24px !important;
+  row-gap: 12px !important;
+}
+.kasir-pos-top-grid label {
+  grid-template-columns: 112px minmax(0,1fr) !important;
+  gap: 10px !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+}
+.kasir-pos-top-grid .kasir-pos-customer {
+  grid-column: 1 / -1 !important;
+}
+.kasir-pos-top-grid input,
+.kasir-pos-top-grid select {
+  height: 33px !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  padding: 0 10px !important;
+  background-color: #fff !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 14px !important;
+}
+.kasir-pos-detail-title {
+  margin-top: 7px !important;
+  padding: 3px 8px !important;
+  background: #acd2ed !important;
+  border: 1px solid #9bbbd1 !important;
+  font-size: 14px !important;
+}
+.kasir-pos-table {
+  width: 100% !important;
+  background: #fff !important;
+  border-collapse: collapse !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 13px !important;
+}
+.kasir-pos-table th {
+  padding: 5px 4px !important;
+  background: #acd2ed !important;
+  border: 1px solid #9bbbd1 !important;
+  font-weight: normal !important;
+}
+.kasir-pos-table td {
+  padding: 3px 6px !important;
+  height: 34px;
+  border: 1px solid #d0d0d0 !important;
+  text-align: center !important;
+}
+.kasir-pos-table select,
+.kasir-pos-table input {
+  height: 24px !important;
+  padding: 1px 5px !important;
+  border: 1px solid #d0d0d0 !important;
+  border-radius: 3px !important;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 12px !important;
+}
+.kasir-pos-add-row { margin-top: 6px !important; }
+.kasir-pos-bottom {
+  grid-template-columns: 1fr 1.05fr !important;
+  gap: 18px !important;
+  margin-top: 8px !important;
+}
+.kasir-pos-bottom > label {
+  grid-template-columns: 126px minmax(0,1fr) !important;
+  font-size: 14px !important;
+}
+.kasir-pos-summary {
+  padding: 8px !important;
+  background: #b4cfe1 !important;
+  border-radius: 5px !important;
+  font-size: 14px !important;
+}
+.kasir-pos-summary .kasir-pos-total {
+  background: #5aa7dc !important;
+}
+.kasir-pos-summary .kasir-pos-change {
+  background: #7bc99b !important;
+}
+.kasir-pos-form .kasir-modal-actions {
+  justify-content: flex-start !important;
+  width: 48% !important;
+  margin-top: -20px !important;
+}
+.kasir-pos-form .kasir-modal-actions button {
+  min-width: 95px !important;
+  min-height: 27px !important;
+  height: 27px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+}
+.kasir-pos-form .kasir-modal-cancel {
+  background: #fff !important;
+  color: #222 !important;
+}
+.kasir-pos-form .kasir-modal-save {
+  background: #9fc5df !important;
+  color: #111 !important;
+}
+@media (max-width: 700px) {
+  .kasir-modal { max-width: calc(100vw - 20px) !important; }
+  .kasir-pos-form { padding: 12px !important; }
+  .kasir-pos-top-grid, .kasir-pos-bottom { grid-template-columns: 1fr !important; }
+  .kasir-pos-top-grid .kasir-pos-customer { grid-column: auto !important; }
+  .kasir-pos-form .kasir-modal-actions {
+    width: 100% !important;
+    margin-top: 14px !important;
+  }
+}
+
+
+/* PILIH PELANGGAN UMUM ATAU INPUT NAMA SENDIRI */
+.kasir-customer-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+.kasir-customer-input-wrap select,
+.kasir-customer-input-wrap input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 33px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+  color: #222;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+}
+.kasir-customer-input-wrap select {
+  flex: 0 0 38%;
+}
+.kasir-customer-input-wrap input {
+  flex: 1 1 auto;
+}
+@media (max-width: 700px) {
+  .kasir-customer-input-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .kasir-customer-input-wrap select {
+    flex-basis: auto;
+  }
+}
+
+/* PENCARIAN BARANG BERDASARKAN KODE PRODUK / NAMA */
+.kasir-product-search {
+  position: relative;
+  margin: 10px 0 9px;
+  z-index: 5;
+}
+.kasir-product-search-field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+  color: #64748b;
+}
+.kasir-product-search-field:focus-within {
+  border-color: #2583d8;
+  box-shadow: 0 0 0 2px rgba(37, 131, 216, .12);
+}
+.kasir-product-search-field input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  font-size: 13px;
+}
+.kasir-product-search-field > button {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 50%;
+  background: #eef2f7;
+  color: #475569;
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+}
+.kasir-product-results {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #d5dce5;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, .14);
+}
+.kasir-product-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 11px;
+  border-bottom: 1px solid #edf0f4;
+}
+.kasir-product-result:last-child { border-bottom: 0; }
+.kasir-product-result-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.kasir-product-result-info strong {
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 600;
+}
+.kasir-product-result-info span {
+  color: #64748b;
+  font-size: 11px;
+}
+.kasir-product-result > button {
+  display: inline-flex;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 5px;
+  background: #1677d2;
+  color: #fff;
+  cursor: pointer;
+}
+.kasir-product-result > button:hover { background: #0d5eae; }
+.kasir-product-empty {
+  padding: 12px;
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+}
+.kasir-product-empty-row {
+  padding: 18px 8px !important;
+  color: #64748b;
+  font-size: 12px;
+  white-space: normal !important;
+}
+.kasir-pos-table .kasir-product-name { text-align: left; }
+@media (max-width: 650px) {
+  .kasir-product-search-field input { font-size: 12px; }
+  .kasir-product-result-info span { font-size: 10px; }
+}

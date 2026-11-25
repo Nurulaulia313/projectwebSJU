@@ -1,0 +1,1495 @@
+/* =====================================================
+   DATA BARANG
+   CSS KHUSUS HALAMAN DATA BARANG
+===================================================== */
+
+
+/* =====================================================
+   ROOT PAGE
+===================================================== */
+
+.data-barang-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+
+.data-barang-app-layout {
+  width: 100%;
+  min-height: calc(100vh - 106px);
+
+  display: flex;
+
+  flex: 1;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.data-barang-sidebar {
+  width: 294px;
+  min-width: 294px;
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px 14px 18px;
+
+  background: #0b1f3a;
+  color: #ffffff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SIDEBAR BRAND
+===================================================== */
+
+.data-barang-sidebar-brand {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+}
+
+.data-barang-sidebar-motor-logo {
+  width: 58px;
+  height: 58px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.data-barang-sidebar-brand-text {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.data-barang-sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 21px;
+  font-weight: bold;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+.data-barang-sidebar-brand-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   GARIS DI BAWAH BRAND
+   HANYA 1 GARIS SEBELUM DASHBOARD
+===================================================== */
+
+.data-barang-sidebar-line {
+  width: calc(100% - 28px);
+
+  height: 1px;
+
+  margin: 16px auto 17px;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: none;
+
+  opacity: 1;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   SIDEBAR MENU
+===================================================== */
+
+.data-barang-sidebar-menu {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+
+/* =====================================================
+   MENU ITEM
+   TIDAK ADA BORDER / GARIS
+===================================================== */
+
+.data-barang-menu-item {
+  width: 100%;
+  min-height: 51px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 8px 15px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =====================================================
+   MENU ICON
+===================================================== */
+
+.data-barang-menu-item img {
+  width: 27px;
+  height: 27px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  border: none;
+}
+
+
+/* =====================================================
+   MENU TEXT
+===================================================== */
+
+.data-barang-menu-item span {
+  display: block;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MENU HOVER
+===================================================== */
+
+.data-barang-menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MENU AKTIF
+===================================================== */
+
+.data-barang-menu-item.active {
+  background: #087ff5;
+
+  color: #ffffff;
+}
+
+.data-barang-menu-item.active span {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM LOGO
+===================================================== */
+
+.data-barang-sidebar-bottom-logo {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 24px;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+.data-barang-sidebar-bottom-logo img {
+  width: 150px;
+  height: auto;
+
+  display: inline-block;
+
+  object-fit: contain;
+}
+
+.data-barang-sidebar-bottom-logo p {
+  margin: 3px 0 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+}
+
+.data-barang-sidebar-bottom-logo small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 11px;
+}
+
+.data-barang-bottom-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 9px auto 0;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.data-barang-main-content {
+  min-width: 0;
+  min-height: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.data-barang-top-header {
+  width: 100%;
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px 0 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #d8d8d8;
+
+  box-sizing: border-box;
+}
+
+.data-barang-top-header h1 {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   HEADER RIGHT
+===================================================== */
+
+.data-barang-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.data-barang-notification-button {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 5px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  cursor: pointer;
+}
+
+.data-barang-notification-icon {
+  width: 24px;
+  height: 24px;
+
+  display: block;
+
+  color: #000000;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.data-barang-profile-area {
+  min-width: 185px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 4px 8px;
+
+  background: #dddddd;
+
+  border-radius: 6px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  box-sizing: border-box;
+}
+
+.data-barang-profile-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid #000000;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.data-barang-profile-icon svg {
+  width: 25px;
+  height: 25px;
+
+  display: block;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+}
+
+.data-barang-profile-info {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.data-barang-profile-info strong {
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  line-height: 1.1;
+}
+
+.data-barang-profile-info span {
+  margin-top: 2px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.data-barang-profile-arrow {
+  color: #000000;
+
+  font-size: 11px;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   CONTENT AREA
+===================================================== */
+
+.data-barang-content-area {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 22px 30px 30px;
+
+  background: #ffffff;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.data-barang-search-area {
+  width: 100%;
+
+  margin-bottom: 14px;
+}
+
+.data-barang-search-box {
+  width: 590px;
+  max-width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 18px;
+
+  background: #dddddd;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+}
+
+.data-barang-search-icon {
+  width: 27px;
+  height: 27px;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 2.2;
+
+  stroke-linecap: round;
+}
+
+.data-barang-search-box input {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 18px;
+}
+
+.data-barang-search-box input::placeholder {
+  color: #000000;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.data-barang-table-container {
+  width: 100%;
+
+  padding: 10px 12px 10px;
+
+  background: #eeeeee;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TABLE TITLE
+===================================================== */
+
+.data-barang-table-title {
+  width: 100%;
+
+  text-align: center;
+}
+
+.data-barang-table-title h2 {
+  margin: 0 0 8px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  line-height: 1.2;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.data-barang-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.data-barang-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+
+  border-spacing: 0;
+
+  background: #f4f4f4;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+}
+
+.data-barang-table thead th {
+  height: 38px;
+
+  padding: 7px 8px;
+
+  background: #c8dceb;
+
+  border: 1px solid #c4c4c4;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+.data-barang-table tbody td {
+  height: 38px;
+
+  padding: 7px 8px;
+
+  background: #f4f4f4;
+
+  border: 1px solid #d0d0d0;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+
+  white-space: nowrap;
+}
+
+.data-barang-table tbody tr:hover td {
+  background: #e8e8e8;
+}
+
+
+/* =====================================================
+   COLUMN WIDTH
+===================================================== */
+
+.data-barang-table th:nth-child(1),
+.data-barang-table td:nth-child(1) {
+  width: 55px;
+}
+
+.data-barang-table th:nth-child(2),
+.data-barang-table td:nth-child(2) {
+  width: 130px;
+}
+
+.data-barang-table th:nth-child(3),
+.data-barang-table td:nth-child(3) {
+  min-width: 180px;
+}
+
+.data-barang-table th:nth-child(4),
+.data-barang-table td:nth-child(4) {
+  min-width: 150px;
+}
+
+.data-barang-table th:nth-child(5),
+.data-barang-table td:nth-child(5) {
+  width: 80px;
+}
+
+.data-barang-table th:nth-child(6),
+.data-barang-table td:nth-child(6) {
+  width: 125px;
+}
+
+.data-barang-table th:nth-child(7),
+.data-barang-table td:nth-child(7) {
+  min-width: 125px;
+}
+
+.data-barang-table th:nth-child(8),
+.data-barang-table td:nth-child(8) {
+  min-width: 125px;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.data-barang-loading {
+  margin: 0;
+
+  padding: 25px;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.data-barang-empty {
+  height: 70px !important;
+
+  padding: 20px !important;
+
+  color: #000000;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   PAGINATION AREA
+===================================================== */
+
+.data-barang-pagination-area {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 12px 2px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SHOW DATA
+===================================================== */
+
+.data-barang-show-data {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.data-barang-show-data select {
+  width: 58px;
+  height: 34px;
+
+  padding: 2px 8px;
+
+  border: 1px solid #000000;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PAGINATION BUTTONS
+===================================================== */
+
+.data-barang-pagination-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.data-barang-pagination-buttons button {
+  min-width: 36px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #000000;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.data-barang-pagination-buttons button:hover:not(:disabled) {
+  background: #dddddd;
+}
+
+.data-barang-pagination-buttons button:disabled {
+  opacity: 0.45;
+
+  cursor: default;
+}
+
+.data-barang-pagination-buttons
+.data-barang-page-number.active-page {
+  background: #c8dceb;
+
+  border-color: #000000;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.data-barang-footer {
+  width: 100%;
+  height: 106px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 45px;
+
+  background: #c5c5c5;
+
+  border-top: 1px solid #8f8f8f;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER LOGO
+===================================================== */
+
+.data-barang-footer-logo {
+  width: 90px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   FOOTER MOTOR
+===================================================== */
+
+.data-barang-footer-motor {
+  width: 65px;
+  height: 65px;
+
+  display: block;
+
+  object-fit: contain;
+
+  filter: brightness(0);
+}
+
+
+/* =====================================================
+   FOOTER TITLE
+===================================================== */
+
+.data-barang-footer-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  text-align: right;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 21px;
+
+  line-height: 1.15;
+}
+
+.data-barang-footer-title strong {
+  font-weight: bold;
+}
+
+.data-barang-footer-title span {
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   RESPONSIVE 1200px
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .data-barang-sidebar {
+    width: 245px;
+    min-width: 245px;
+  }
+
+  .data-barang-sidebar-brand-text h2 {
+    font-size: 18px;
+  }
+
+  .data-barang-menu-item {
+    font-size: 14px;
+  }
+
+  .data-barang-search-box {
+    width: 500px;
+  }
+
+  .data-barang-top-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .data-barang-content-area {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE 900px
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .data-barang-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .data-barang-sidebar-brand {
+    padding: 0 7px;
+    gap: 8px;
+  }
+
+  .data-barang-sidebar-motor-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .data-barang-sidebar-brand-text h2 {
+    font-size: 15px;
+  }
+
+  .data-barang-sidebar-brand-text span {
+    font-size: 11px;
+  }
+
+  .data-barang-menu-item {
+    font-size: 13px;
+    gap: 9px;
+  }
+
+  .data-barang-menu-item img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .data-barang-top-header h1 {
+    font-size: 23px;
+  }
+
+  .data-barang-header-right {
+    gap: 14px;
+  }
+
+  .data-barang-profile-area {
+    min-width: 160px;
+  }
+
+  .data-barang-search-box {
+    width: 100%;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE 700px
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .data-barang-app-layout {
+    min-height: auto;
+  }
+
+  .data-barang-sidebar {
+    width: 190px;
+    min-width: 190px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .data-barang-sidebar-brand-text h2 {
+    font-size: 13px;
+  }
+
+  .data-barang-sidebar-brand-text span {
+    font-size: 10px;
+  }
+
+  .data-barang-menu-item {
+    min-height: 45px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+
+    font-size: 12px;
+  }
+
+  .data-barang-menu-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .data-barang-top-header {
+    height: 70px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .data-barang-top-header h1 {
+    font-size: 21px;
+  }
+
+  .data-barang-profile-area {
+    min-width: 45px;
+    width: 45px;
+
+    padding: 4px;
+
+    justify-content: center;
+  }
+
+  .data-barang-profile-info,
+  .data-barang-profile-arrow {
+    display: none;
+  }
+
+  .data-barang-content-area {
+    padding: 18px;
+  }
+
+  .data-barang-pagination-area {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .data-barang-footer {
+    height: 95px;
+
+    padding: 8px 20px;
+  }
+
+  .data-barang-footer-logo {
+    width: 75px;
+  }
+
+  .data-barang-footer-motor {
+    width: 55px;
+    height: 55px;
+  }
+
+  .data-barang-footer-title {
+    font-size: 17px;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE 500px
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .data-barang-sidebar {
+    width: 70px;
+    min-width: 70px;
+
+    padding: 15px 6px;
+  }
+
+  .data-barang-sidebar-brand {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .data-barang-sidebar-motor-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .data-barang-sidebar-brand-text {
+    display: none;
+  }
+
+  .data-barang-sidebar-line {
+    width: 90%;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .data-barang-menu-item {
+    justify-content: center;
+
+    padding: 8px;
+
+    gap: 0;
+  }
+
+  .data-barang-menu-item span {
+    display: none;
+  }
+
+  .data-barang-sidebar-bottom-logo {
+    display: none;
+  }
+
+  .data-barang-header-right {
+    gap: 5px;
+  }
+
+  .data-barang-notification-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .data-barang-content-area {
+    padding: 15px;
+  }
+
+  .data-barang-table-container {
+    padding: 8px;
+  }
+
+  .data-barang-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+/* =====================================================
+   PROFILE WRAPPER
+===================================================== */
+
+.data-barang-profile-wrapper {
+  position: relative;
+}
+
+
+/* =====================================================
+   PROFILE AREA
+===================================================== */
+
+.data-barang-profile-area {
+  min-width: 185px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 4px 8px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  background: #dddddd;
+
+  border-radius: 6px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   PROFILE ICON
+===================================================== */
+
+.data-barang-profile-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid #000000;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+.data-barang-profile-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+}
+
+
+/* =====================================================
+   PROFILE INFO
+===================================================== */
+
+.data-barang-profile-info {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+
+.data-barang-profile-info strong {
+  font-size: 14px;
+
+  line-height: 1.1;
+}
+
+
+.data-barang-profile-info span {
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   PROFILE ARROW
+===================================================== */
+
+.data-barang-profile-arrow {
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   PROFILE DROPDOWN
+===================================================== */
+
+.data-barang-profile-dropdown {
+  position: absolute;
+
+  top: calc(100% + 8px);
+
+  right: 0;
+
+  width: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+}
+
+
+/* =====================================================
+   DROPDOWN BUTTON
+===================================================== */
+
+.data-barang-profile-dropdown button {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  text-align: left;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+
+
+.data-barang-profile-dropdown button:hover {
+  background: #eeeeee;
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+.data-barang-profile-dropdown
+.data-barang-logout-button {
+  color: #d00000;
+}
+
+
+.data-barang-profile-dropdown
+.data-barang-logout-button:hover {
+  background: #ffe5e5;
+
+  color: #d00000;
+}

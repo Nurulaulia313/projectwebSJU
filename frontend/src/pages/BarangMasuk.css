@@ -1,0 +1,2564 @@
+/* =====================================================
+   BARANG MASUK
+   CSS KHUSUS HALAMAN BARANG MASUK
+===================================================== */
+
+
+/* =====================================================
+   ROOT PAGE
+===================================================== */
+
+.barang-masuk-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+
+.barang-masuk-app-layout {
+  width: 100%;
+  min-height: calc(100vh - 106px);
+
+  display: flex;
+
+  flex: 1;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   SIDEBAR
+   DISESUAIKAN SAMA DENGAN DATA BARANG
+===================================================== */
+
+.barang-masuk-sidebar {
+  width: 294px;
+  min-width: 294px;
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px 14px 18px;
+
+  background: #0b1f3a;
+  color: #ffffff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SIDEBAR BRAND
+===================================================== */
+
+.barang-masuk-sidebar-brand {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-sidebar-motor-logo {
+  width: 58px;
+  height: 58px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+.barang-masuk-sidebar-brand-text {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.barang-masuk-sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 21px;
+  font-weight: bold;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+
+.barang-masuk-sidebar-brand-text span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   GARIS DI BAWAH BRAND
+===================================================== */
+
+.barang-masuk-sidebar-line {
+  width: calc(100% - 28px);
+
+  height: 1px;
+
+  margin: 16px auto 17px;
+
+  padding: 0;
+
+  background: #ffffff;
+
+  border: none;
+
+  opacity: 1;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   SIDEBAR MENU
+===================================================== */
+
+.barang-masuk-sidebar-menu {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+
+/* =====================================================
+   MENU ITEM
+===================================================== */
+
+.barang-masuk-menu-item {
+  width: 100%;
+  min-height: 51px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 8px 15px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  border: none;
+  outline: none;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =====================================================
+   MENU ICON
+   SVG IKUT UKURAN DATA BARANG
+===================================================== */
+
+.barang-masuk-menu-item svg {
+  width: 27px;
+  height: 27px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MENU TEXT
+===================================================== */
+
+.barang-masuk-menu-item span {
+  display: block;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MENU HOVER
+===================================================== */
+
+.barang-masuk-menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MENU AKTIF
+===================================================== */
+
+.barang-masuk-menu-item.active {
+  background: #087ff5;
+
+  color: #ffffff;
+}
+
+
+.barang-masuk-menu-item.active span {
+  color: #ffffff;
+}
+
+
+.barang-masuk-menu-item.active svg {
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM LOGO
+===================================================== */
+
+.barang-masuk-sidebar-bottom-logo {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 24px;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+
+.barang-masuk-sidebar-bottom-logo img {
+  width: 150px;
+  height: auto;
+
+  display: inline-block;
+
+  object-fit: contain;
+}
+
+
+.barang-masuk-sidebar-bottom-logo p {
+  margin: 3px 0 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+}
+
+
+.barang-masuk-sidebar-bottom-logo small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 11px;
+}
+
+
+.barang-masuk-bottom-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 9px auto 0;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.barang-masuk-main-content {
+  min-width: 0;
+  min-height: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.barang-masuk-top-header {
+  width: 100%;
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px 0 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #d8d8d8;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-top-header h1 {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   HEADER RIGHT
+===================================================== */
+
+.barang-masuk-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.barang-masuk-notification-button {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 5px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-notification-button svg {
+  width: 24px;
+  height: 24px;
+
+  display: block;
+
+  color: #000000;
+}
+
+
+/* =====================================================
+   PROFILE WRAPPER
+===================================================== */
+
+.barang-masuk-profile-wrapper {
+  position: relative;
+}
+
+
+/* =====================================================
+   PROFILE AREA
+===================================================== */
+
+.barang-masuk-profile-area {
+  min-width: 185px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 4px 8px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  background: #dddddd;
+
+  border-radius: 6px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   PROFILE ICON
+===================================================== */
+
+.barang-masuk-profile-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid #000000;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+.barang-masuk-profile-icon svg {
+  width: 25px;
+  height: 25px;
+
+  display: block;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+}
+
+
+/* =====================================================
+   PROFILE INFO
+===================================================== */
+
+.barang-masuk-profile-info {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+
+.barang-masuk-profile-info strong {
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  line-height: 1.1;
+}
+
+
+.barang-masuk-profile-info span {
+  margin-top: 2px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   PROFILE ARROW
+===================================================== */
+
+.barang-masuk-profile-arrow {
+  color: #000000;
+
+  font-size: 10px;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   PROFILE DROPDOWN
+===================================================== */
+
+.barang-masuk-profile-dropdown {
+  position: absolute;
+
+  top: calc(100% + 8px);
+
+  right: 0;
+
+  width: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+}
+
+
+.barang-masuk-profile-dropdown button {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  text-align: left;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+
+
+.barang-masuk-profile-dropdown button:hover {
+  background: #eeeeee;
+}
+
+
+.barang-masuk-profile-dropdown
+.barang-masuk-logout-button {
+  color: #d00000;
+}
+
+
+.barang-masuk-profile-dropdown
+.barang-masuk-logout-button:hover {
+  background: #ffe5e5;
+
+  color: #d00000;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.barang-masuk-content {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 22px 30px 30px;
+
+  background: #ffffff;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   INFORMATION AREA
+===================================================== */
+
+.barang-masuk-information-area {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+
+  position: relative;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.barang-masuk-description {
+  min-width: 180px;
+}
+
+
+.barang-masuk-description p {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  line-height: 1.25;
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.barang-masuk-search-box {
+  width: 360px;
+  max-width: 100%;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 18px;
+
+  background: #dddddd;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-search-icon {
+  width: 27px;
+  height: 27px;
+
+  display: block;
+
+  flex-shrink: 0;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 2.2;
+
+  stroke-linecap: round;
+}
+
+
+.barang-masuk-search-box input {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 16px;
+}
+
+
+.barang-masuk-search-box input::placeholder {
+  color: #000000;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   DATE BOX
+===================================================== */
+
+.barang-masuk-date-box {
+  width: 180px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  gap: 9px;
+
+  padding: 0 14px;
+
+  background: #dddddd;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-calendar-icon {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+}
+
+
+.barang-masuk-date-box input {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-date-box span {
+  position: absolute;
+
+  left: 46px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+
+.barang-masuk-date-box input:not(:placeholder-shown) + span {
+  display: none;
+}
+
+
+/* =====================================================
+   FILTER BUTTON
+===================================================== */
+
+.barang-masuk-filter-button {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #dddddd;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-filter-button:hover {
+  background: #cccccc;
+}
+
+
+.barang-masuk-filter-icon {
+  width: 22px;
+  height: 22px;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 1.7;
+
+  stroke-linejoin: round;
+}
+
+
+/* =====================================================
+   ADD BUTTON
+===================================================== */
+
+.barang-masuk-add-button {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-left: auto;
+
+  padding: 0 18px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #087ff5;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+
+.barang-masuk-add-button:hover {
+  background: #006fdd;
+}
+
+
+.barang-masuk-plus {
+  font-size: 22px;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   FILTER DROPDOWN
+===================================================== */
+
+.barang-masuk-filter-dropdown {
+  position: absolute;
+
+  top: calc(100% + 6px);
+
+  right: 165px;
+
+  width: 180px;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.15);
+
+  z-index: 500;
+}
+
+
+.barang-masuk-filter-dropdown strong {
+  font-size: 14px;
+}
+
+
+.barang-masuk-filter-dropdown button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 8px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-filter-dropdown button:hover {
+  background: #eeeeee;
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.barang-masuk-table-container {
+  width: 100%;
+
+  padding: 10px 12px 10px;
+
+  background: #eeeeee;
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TABLE TITLE
+===================================================== */
+
+.barang-masuk-table-title {
+  width: 100%;
+
+  text-align: center;
+}
+
+
+.barang-masuk-table-title h2 {
+  margin: 0 0 8px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  line-height: 1.2;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.barang-masuk-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.barang-masuk-table {
+  width: 100%;
+
+  min-width: 1050px;
+
+  border-collapse: collapse;
+
+  border-spacing: 0;
+
+  background: #f4f4f4;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.barang-masuk-table thead th {
+  height: 38px;
+
+  padding: 7px 8px;
+
+  background: #c8dceb;
+
+  border: 1px solid #c4c4c4;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.barang-masuk-table tbody td {
+  height: 38px;
+
+  padding: 7px 8px;
+
+  background: #f4f4f4;
+
+  border: 1px solid #d0d0d0;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+
+  white-space: nowrap;
+}
+
+
+.barang-masuk-table tbody tr:hover td {
+  background: #e8e8e8;
+}
+
+
+/* =====================================================
+   COLUMN WIDTH
+===================================================== */
+
+.barang-masuk-table th:nth-child(1),
+.barang-masuk-table td:nth-child(1) {
+  width: 50px;
+}
+
+
+.barang-masuk-table th:nth-child(2),
+.barang-masuk-table td:nth-child(2) {
+  width: 115px;
+}
+
+
+.barang-masuk-table th:nth-child(3),
+.barang-masuk-table td:nth-child(3) {
+  width: 120px;
+}
+
+
+.barang-masuk-table th:nth-child(4),
+.barang-masuk-table td:nth-child(4) {
+  min-width: 170px;
+}
+
+
+.barang-masuk-table th:nth-child(5),
+.barang-masuk-table td:nth-child(5) {
+  min-width: 150px;
+}
+
+
+.barang-masuk-table th:nth-child(6),
+.barang-masuk-table td:nth-child(6) {
+  width: 80px;
+}
+
+
+.barang-masuk-table th:nth-child(7),
+.barang-masuk-table td:nth-child(7) {
+  width: 125px;
+}
+
+
+.barang-masuk-table th:nth-child(8),
+.barang-masuk-table td:nth-child(8) {
+  width: 90px;
+}
+
+
+.barang-masuk-table th:nth-child(9),
+.barang-masuk-table td:nth-child(9) {
+  min-width: 150px;
+}
+
+
+/* =====================================================
+   BUKTI NOTA
+===================================================== */
+
+.barang-masuk-bukti-button {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #087ff5;
+
+  color: #ffffff;
+
+  text-decoration: none;
+}
+
+
+.barang-masuk-bukti-button svg {
+  width: 19px;
+  height: 19px;
+
+  color: #ffffff;
+}
+
+
+.barang-masuk-bukti-empty {
+  background: #cccccc;
+
+  color: #777777;
+
+  cursor: default;
+}
+
+
+.barang-masuk-bukti-empty svg {
+  color: #777777;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.barang-masuk-action-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+}
+
+
+/* =====================================================
+   EDIT BUTTON
+===================================================== */
+
+.barang-masuk-edit-button {
+  min-width: 62px;
+  height: 32px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 8px;
+
+  border: 1px solid #087ff5;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #087ff5;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-edit-button:hover {
+  background: #e8f3ff;
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.barang-masuk-delete-button {
+  min-width: 62px;
+  height: 32px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 8px;
+
+  border: 1px solid #d00000;
+
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  color: #d00000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-delete-button:hover {
+  background: #ffe5e5;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.barang-masuk-loading {
+  margin: 0;
+
+  padding: 25px;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.barang-masuk-error {
+  padding: 25px;
+
+  color: #000000;
+
+  text-align: center;
+
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+.barang-masuk-error p {
+  margin: 0 0 12px;
+}
+
+
+.barang-masuk-error button {
+  padding: 8px 15px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #087ff5;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.barang-masuk-empty {
+  height: 70px !important;
+
+  padding: 20px !important;
+
+  color: #000000;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   PAGINATION AREA
+===================================================== */
+
+.barang-masuk-pagination-area {
+  width: 100%;
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 12px 2px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SHOW DATA
+===================================================== */
+
+.barang-masuk-show-data {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.barang-masuk-show-data select {
+  width: 58px;
+  height: 34px;
+
+  padding: 2px 8px;
+
+  border: 1px solid #000000;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PAGINATION INFO
+===================================================== */
+
+.barang-masuk-pagination-info {
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PAGINATION BUTTONS
+===================================================== */
+
+.barang-masuk-pagination-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.barang-masuk-pagination-buttons button {
+  min-width: 36px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #000000;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-pagination-buttons button:hover:not(:disabled) {
+  background: #dddddd;
+}
+
+
+.barang-masuk-pagination-buttons button:disabled {
+  opacity: 0.45;
+
+  cursor: default;
+}
+
+
+.barang-masuk-pagination-buttons button.active {
+  background: #c8dceb;
+
+  border-color: #000000;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.barang-masuk-footer {
+  width: 100%;
+  height: 106px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 45px;
+
+  background: #c5c5c5;
+
+  border-top: 1px solid #8f8f8f;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER LEFT
+===================================================== */
+
+.barang-masuk-footer-left {
+  display: flex;
+  align-items: center;
+}
+
+
+.barang-masuk-footer-left img {
+  width: 90px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   FOOTER CENTER
+===================================================== */
+
+.barang-masuk-footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.barang-masuk-footer-center img {
+  width: 65px;
+  height: 65px;
+
+  display: block;
+
+  object-fit: contain;
+
+  filter: brightness(0);
+}
+
+
+/* =====================================================
+   FOOTER TITLE
+===================================================== */
+
+.barang-masuk-footer-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  text-align: right;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 21px;
+
+  line-height: 1.15;
+}
+
+
+.barang-masuk-footer-title strong {
+  font-weight: bold;
+}
+
+
+.barang-masuk-footer-title span {
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.barang-masuk-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: 2000;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.barang-masuk-modal {
+  width: 600px;
+  max-width: 100%;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.barang-masuk-modal-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 22px;
+
+  border-bottom: 1px solid #dddddd;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-modal-header h2 {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   MODAL CLOSE
+===================================================== */
+
+.barang-masuk-modal-close {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  font-size: 27px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-modal-close:hover {
+  color: #d00000;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.barang-masuk-form {
+  padding: 20px 22px 22px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+.barang-masuk-form-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-bottom: 15px;
+}
+
+
+.barang-masuk-form-group label {
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+.barang-masuk-form-group input {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #bcbcbc;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+
+
+.barang-masuk-form-group input:focus {
+  border-color: #087ff5;
+}
+
+
+/* =====================================================
+   FORM ROW
+===================================================== */
+
+.barang-masuk-form-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+===================================================== */
+
+.barang-masuk-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+
+/* =====================================================
+   CANCEL
+===================================================== */
+
+.barang-masuk-cancel-button {
+  height: 40px;
+
+  padding: 0 18px;
+
+  border: 1px solid #999999;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-cancel-button:hover {
+  background: #eeeeee;
+}
+
+
+/* =====================================================
+   SAVE
+===================================================== */
+
+.barang-masuk-save-button {
+  height: 40px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #087ff5;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+.barang-masuk-save-button:hover {
+  background: #006fdd;
+}
+
+
+/* =====================================================
+   RESPONSIVE 1200px
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .barang-masuk-sidebar {
+    width: 245px;
+    min-width: 245px;
+  }
+
+
+  .barang-masuk-sidebar-brand-text h2 {
+    font-size: 18px;
+  }
+
+
+  .barang-masuk-menu-item {
+    font-size: 14px;
+  }
+
+
+  .barang-masuk-information-area {
+    flex-wrap: wrap;
+  }
+
+
+  .barang-masuk-search-box {
+    width: 320px;
+  }
+
+
+  .barang-masuk-top-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+
+  .barang-masuk-content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE 900px
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .barang-masuk-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+
+  .barang-masuk-sidebar-brand {
+    padding: 0 7px;
+
+    gap: 8px;
+  }
+
+
+  .barang-masuk-sidebar-motor-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .barang-masuk-sidebar-brand-text h2 {
+    font-size: 15px;
+  }
+
+
+  .barang-masuk-sidebar-brand-text span {
+    font-size: 11px;
+  }
+
+
+  .barang-masuk-menu-item {
+    font-size: 13px;
+
+    gap: 9px;
+  }
+
+
+  .barang-masuk-menu-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  .barang-masuk-top-header h1 {
+    font-size: 23px;
+  }
+
+
+  .barang-masuk-header-right {
+    gap: 14px;
+  }
+
+
+  .barang-masuk-profile-area {
+    min-width: 160px;
+  }
+
+
+  .barang-masuk-search-box {
+    width: 100%;
+  }
+
+
+  .barang-masuk-date-box {
+    width: 170px;
+  }
+
+
+  .barang-masuk-add-button {
+    margin-left: 0;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE 700px
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .barang-masuk-app-layout {
+    min-height: auto;
+  }
+
+
+  .barang-masuk-sidebar {
+    width: 190px;
+    min-width: 190px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+
+  .barang-masuk-sidebar-brand-text h2 {
+    font-size: 13px;
+  }
+
+
+  .barang-masuk-sidebar-brand-text span {
+    font-size: 10px;
+  }
+
+
+  .barang-masuk-menu-item {
+    min-height: 45px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+
+    font-size: 12px;
+  }
+
+
+  .barang-masuk-menu-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .barang-masuk-top-header {
+    height: 70px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+
+  .barang-masuk-top-header h1 {
+    font-size: 21px;
+  }
+
+
+  .barang-masuk-profile-area {
+    min-width: 45px;
+    width: 45px;
+
+    padding: 4px;
+
+    justify-content: center;
+  }
+
+
+  .barang-masuk-profile-info,
+  .barang-masuk-profile-arrow {
+    display: none;
+  }
+
+
+  .barang-masuk-content {
+    padding: 18px;
+  }
+
+
+  .barang-masuk-information-area {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .barang-masuk-description {
+    min-width: 0;
+  }
+
+
+  .barang-masuk-search-box {
+    width: 100%;
+  }
+
+
+  .barang-masuk-date-box {
+    width: 100%;
+  }
+
+
+  .barang-masuk-filter-button {
+    width: 100%;
+  }
+
+
+  .barang-masuk-add-button {
+    width: 100%;
+  }
+
+
+  .barang-masuk-pagination-area {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+
+  .barang-masuk-footer {
+    height: 95px;
+
+    padding: 8px 20px;
+  }
+
+
+  .barang-masuk-footer-left img {
+    width: 75px;
+  }
+
+
+  .barang-masuk-footer-center img {
+    width: 55px;
+    height: 55px;
+  }
+
+
+  .barang-masuk-footer-title {
+    font-size: 17px;
+  }
+
+
+  .barang-masuk-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE 500px
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .barang-masuk-sidebar {
+    width: 70px;
+    min-width: 70px;
+
+    padding: 15px 6px;
+  }
+
+
+  .barang-masuk-sidebar-brand {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+
+  .barang-masuk-sidebar-motor-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+
+  .barang-masuk-sidebar-brand-text {
+    display: none;
+  }
+
+
+  .barang-masuk-sidebar-line {
+    width: 90%;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+
+  .barang-masuk-menu-item {
+    justify-content: center;
+
+    padding: 8px;
+
+    gap: 0;
+  }
+
+
+  .barang-masuk-menu-item span {
+    display: none;
+  }
+
+
+  .barang-masuk-menu-item svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .barang-masuk-sidebar-bottom-logo {
+    display: none;
+  }
+
+
+  .barang-masuk-header-right {
+    gap: 5px;
+  }
+
+
+  .barang-masuk-notification-button {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .barang-masuk-content {
+    padding: 15px;
+  }
+
+
+  .barang-masuk-table-container {
+    padding: 8px;
+  }
+
+
+  .barang-masuk-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .barang-masuk-footer-title {
+    font-size: 14px;
+  }
+
+
+  .barang-masuk-modal-overlay {
+    padding: 10px;
+  }
+
+
+  .barang-masuk-modal-header {
+    padding: 15px;
+  }
+
+
+  .barang-masuk-form {
+    padding: 15px;
+  }
+}
+
+
+/* =====================================================
+   TAMBAHAN CSS BARANG MASUK
+===================================================== */
+
+/* Ikon sidebar berbentuk gambar */
+.barang-masuk-menu-item img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Posisi dropdown filter */
+.barang-masuk-information-area {
+  position: relative;
+}
+
+.barang-masuk-filter-dropdown {
+  right: 150px;
+  width: 260px;
+  max-width: calc(100vw - 40px);
+  max-height: 70vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.barang-masuk-filter-dropdown .barang-masuk-form-group {
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.barang-masuk-filter-dropdown .barang-masuk-form-group input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Tombol dan elemen formulir */
+.barang-masuk-form-group select,
+.barang-masuk-form-group textarea {
+  max-width: 100%;
+}
+
+.barang-masuk-form-group input:focus,
+.barang-masuk-form-group select:focus,
+.barang-masuk-form-group textarea:focus {
+  outline: none;
+  border-color: #087ff5;
+  box-shadow: 0 0 0 2px rgba(8, 127, 245, 0.12);
+}
+
+.barang-masuk-save-button:disabled,
+.barang-masuk-cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Pesan berhasil dan error */
+.barang-masuk-error {
+  overflow-wrap: anywhere;
+}
+
+.barang-masuk-error button {
+  cursor: pointer;
+}
+
+/* Footer tetap di bawah konten utama */
+.barang-masuk-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tabel tetap dapat digulir secara horizontal */
+.barang-masuk-table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .barang-masuk-information-area {
+    flex-wrap: wrap;
+  }
+
+  .barang-masuk-description {
+    width: 100%;
+  }
+
+  .barang-masuk-search-box {
+    flex: 1 1 250px;
+  }
+
+  .barang-masuk-filter-dropdown {
+    right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .barang-masuk-filter-dropdown {
+    width: 100%;
+    right: 0;
+    top: calc(100% + 6px);
+  }
+
+  .barang-masuk-modal {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .barang-masuk-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .barang-masuk-pagination-area {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .barang-masuk-pagination-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+/* LOGO BAGIAN ATAS SIDEBAR */
+.barang-masuk-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 16px;
+}
+
+.barang-masuk-sidebar-motor-logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* TEKS BRAND SIDEBAR */
+.barang-masuk-sidebar-brand-text {
+  min-width: 0;
+}
+
+.barang-masuk-sidebar-brand-text h2 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.barang-masuk-sidebar-brand-text span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+}
+
+/* LOGO BAGIAN BAWAH SIDEBAR */
+.barang-masuk-sidebar-bottom-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 10px;
+}
+
+.barang-masuk-sidebar-bottom-logo img {
+  display: block;
+  width: 90px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.barang-masuk-sidebar-bottom-logo p {
+  margin: 0;
+}
+
+.barang-masuk-sidebar-bottom-logo small {
+  display: block;
+  margin-top: 4px;
+}
+
+
+/* =====================================================
+   LOGO BAGIAN BAWAH SIDEBAR
+   DISESUAIKAN DENGAN DATA BARANG
+===================================================== */
+
+.barang-masuk-sidebar-bottom-logo {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 24px;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+.barang-masuk-sidebar-bottom-logo img {
+  width: 150px;
+  height: auto;
+
+  display: inline-block;
+
+  object-fit: contain;
+}
+
+.barang-masuk-sidebar-bottom-logo p {
+  margin: 3px 0 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+}
+
+.barang-masuk-sidebar-bottom-logo small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 11px;
+}
+
+.barang-masuk-bottom-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 9px auto 0;
+
+  background: #ffffff;
+}

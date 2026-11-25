@@ -1,0 +1,1857 @@
+/* =====================================================
+   SUPPLIER PAGE
+   UKURAN DISESUAIKAN DENGAN DASHBOARD
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   GLOBAL PAGE
+===================================================== */
+
+.supplier-page {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+
+.supplier-app-layout {
+  width: 100%;
+
+  min-height: calc(100vh - 106px);
+
+  display: flex;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   SIDEBAR
+   SAMA DENGAN DASHBOARD
+===================================================== */
+
+.supplier-sidebar {
+  width: 294px;
+  min-width: 294px;
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px 14px 18px;
+
+  background: #0b1f3a;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   SIDEBAR BRAND
+===================================================== */
+
+.supplier-sidebar-brand {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 12px;
+}
+
+
+/* =====================================================
+   LOGO MOTOR
+===================================================== */
+
+.supplier-sidebar-motor-logo {
+  width: 58px;
+  height: 58px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   BRAND TEXT
+===================================================== */
+
+.supplier-sidebar-brand-text {
+  min-width: 0;
+}
+
+.supplier-sidebar-brand-text h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 21px;
+
+  font-weight: bold;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+.supplier-sidebar-brand-text span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   GARIS SIDEBAR
+===================================================== */
+
+.supplier-sidebar-line {
+  width: calc(100% - 28px);
+
+  height: 1px;
+
+  margin: 14px auto 16px;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   SIDEBAR MENU
+===================================================== */
+
+.supplier-sidebar-menu {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+/* =====================================================
+   MENU ITEM
+===================================================== */
+
+.supplier-menu-item {
+  width: 100%;
+
+  min-height: 51px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 8px 13px;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =====================================================
+   MENU ICON
+===================================================== */
+
+.supplier-menu-item img {
+  width: 29px;
+  height: 29px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   MENU TEXT
+===================================================== */
+
+.supplier-menu-item span {
+  display: block;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   MENU HOVER
+===================================================== */
+
+.supplier-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MENU ACTIVE
+===================================================== */
+
+.supplier-menu-item.active {
+  background: #087ff5;
+
+  color: #ffffff;
+}
+
+.supplier-menu-item.active:hover {
+  background: #087ff5;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+===================================================== */
+
+.supplier-sidebar-bottom-logo {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 24px;
+
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+.supplier-sidebar-bottom-logo img {
+  width: 150px;
+  height: auto;
+
+  display: inline-block;
+
+  object-fit: contain;
+}
+
+.supplier-sidebar-bottom-logo p {
+  margin: 3px 0 0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.supplier-sidebar-bottom-logo small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+}
+
+.supplier-bottom-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 9px auto 0;
+
+  background: #ffffff;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.supplier-main-content {
+  min-width: 0;
+  min-height: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+   SAMA DENGAN DASHBOARD
+===================================================== */
+
+.supplier-top-header {
+  width: 100%;
+
+  height: 78px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px 0 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #d8d8d8;
+}
+
+
+/* =====================================================
+   HEADER TITLE
+===================================================== */
+
+.supplier-top-header h1 {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   HEADER RIGHT
+===================================================== */
+
+.supplier-header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =====================================================
+   NOTIFICATION
+===================================================== */
+
+.supplier-notification-button {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.supplier-notification-button:hover {
+  background: #eeeeee;
+}
+
+.supplier-notification-icon {
+  width: 24px;
+  height: 24px;
+
+  display: block;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.supplier-profile-wrapper {
+  position: relative;
+}
+
+
+.supplier-profile-area {
+  min-width: 185px;
+
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 4px 8px;
+
+  border: none;
+
+  background: #dddddd;
+
+  border-radius: 6px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   PROFILE ICON
+===================================================== */
+
+.supplier-profile-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid #000000;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+.supplier-profile-icon svg {
+  width: 25px;
+  height: 25px;
+
+  fill: none;
+
+  stroke: #000000;
+
+  stroke-width: 1.8;
+
+  stroke-linecap: round;
+}
+
+
+/* =====================================================
+   PROFILE INFORMATION
+===================================================== */
+
+.supplier-profile-info {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.supplier-profile-info strong {
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  line-height: 1.1;
+}
+
+.supplier-profile-info span {
+  margin-top: 2px;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.supplier-profile-arrow {
+  color: #000000;
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   PROFILE DROPDOWN
+===================================================== */
+
+.supplier-profile-dropdown {
+  position: absolute;
+
+  top: calc(100% + 8px);
+
+  right: 0;
+
+  width: 180px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 6px;
+
+  background: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.15);
+
+  z-index: 1000;
+}
+
+
+.supplier-profile-dropdown a,
+.supplier-profile-dropdown button {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #000000;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+}
+
+
+.supplier-profile-dropdown a:hover,
+.supplier-profile-dropdown button:hover {
+  background: #eeeeee;
+}
+
+
+.supplier-logout-button {
+  color: #d00000 !important;
+}
+
+
+/* =====================================================
+   CONTENT AREA
+===================================================== */
+
+.supplier-content-area {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 24px 30px 30px;
+
+  background: #ffffff;
+
+  overflow-y: auto;
+}
+
+
+/* =====================================================
+   TOP INFORMATION AREA
+===================================================== */
+
+.supplier-information-area {
+  width: 100%;
+
+  min-height: 145px;
+
+  position: relative;
+
+  padding: 18px 20px;
+
+  background: #eeeeee;
+
+  border-radius: 10px;
+
+  border: 1px solid #dddddd;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.supplier-description {
+  width: calc(100% - 40px);
+
+  position: absolute;
+
+  top: 17px;
+
+  left: 20px;
+}
+
+.supplier-description p {
+  margin: 0;
+
+  color: #333333;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 18px;
+
+  font-weight: normal;
+
+  line-height: 1.35;
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.supplier-search-box {
+  position: absolute;
+
+  left: 20px;
+
+  bottom: 18px;
+
+  width: 380px;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 13px;
+
+  background: #d8d8d8;
+
+  border-radius: 7px;
+}
+
+
+.supplier-search-icon {
+  width: 21px;
+  height: 21px;
+
+  margin-right: 10px;
+
+  flex-shrink: 0;
+
+  fill: none;
+
+  stroke: #333333;
+
+  stroke-width: 2;
+}
+
+
+.supplier-search-box input {
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #333333;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+}
+
+
+.supplier-search-box input::placeholder {
+  color: #555555;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   TAMBAH SUPPLIER BUTTON
+===================================================== */
+
+.supplier-add-button {
+  position: absolute;
+
+  right: 20px;
+
+  bottom: 18px;
+
+  height: 40px;
+
+  min-width: 155px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  padding: 0 15px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #087ff5;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  transition: background 0.2s ease;
+}
+
+
+.supplier-add-button:hover {
+  background: #066bcf;
+}
+
+
+.supplier-add-button span {
+  font-family: Arial, sans-serif;
+
+  font-size: 22px;
+
+  font-weight: normal;
+
+  line-height: 1;
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.supplier-table-container {
+  width: 100%;
+
+  min-height: 390px;
+
+  margin-top: 20px;
+
+  padding: 14px 20px 15px;
+
+  background: #eeeeee;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   TABLE TITLE
+===================================================== */
+
+.supplier-table-title {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 8px;
+}
+
+
+.supplier-table-title h2 {
+  margin: 0;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 19px;
+
+  font-weight: bold;
+
+  line-height: 1.2;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.supplier-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.supplier-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+
+  background: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.supplier-table th {
+  height: 42px;
+
+  padding: 8px;
+
+  background: #c8dceb;
+
+  color: #000000;
+
+  border: 1px solid #c4c4c4;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.supplier-table td {
+  height: 42px;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  border: 1px solid #dddddd;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  font-size: 13px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.supplier-table tbody tr:hover td {
+  background: #f3f6f8;
+}
+
+
+/* =====================================================
+   COLUMN WIDTH
+===================================================== */
+
+.supplier-table th:nth-child(1),
+.supplier-table td:nth-child(1) {
+  width: 7%;
+}
+
+
+.supplier-table th:nth-child(2),
+.supplier-table td:nth-child(2) {
+  width: 18%;
+}
+
+
+.supplier-table th:nth-child(3),
+.supplier-table td:nth-child(3) {
+  width: 17%;
+}
+
+
+.supplier-table th:nth-child(4),
+.supplier-table td:nth-child(4) {
+  width: 22%;
+}
+
+
+.supplier-table th:nth-child(5),
+.supplier-table td:nth-child(5) {
+  width: 16%;
+}
+
+
+.supplier-table th:nth-child(6),
+.supplier-table td:nth-child(6) {
+  width: 20%;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.supplier-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+}
+
+
+.supplier-edit-button,
+.supplier-delete-button {
+  min-width: 65px;
+
+  height: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 0 9px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 12px;
+
+  line-height: 1;
+}
+
+
+.supplier-edit-button {
+  background: #77b8e5;
+
+  color: #ffffff;
+}
+
+
+.supplier-edit-button:hover {
+  background: #479dd4;
+}
+
+
+.supplier-delete-button {
+  background: #e76f73;
+
+  color: #ffffff;
+}
+
+
+.supplier-delete-button:hover {
+  background: #d95257;
+}
+
+
+.supplier-edit-button span,
+.supplier-delete-button span {
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   EMPTY
+===================================================== */
+
+.supplier-empty {
+  height: 150px !important;
+
+  color: #777777 !important;
+
+  text-align: center !important;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.supplier-loading {
+  width: 100%;
+
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #555555;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.supplier-pagination-area {
+  width: 100%;
+
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.supplier-pagination-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+
+/* =====================================================
+   PAGINATION BUTTON
+===================================================== */
+
+.supplier-page-arrow,
+.supplier-page-number {
+  min-width: 32px;
+
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 8px;
+
+  border: 1px solid #999999;
+
+  border-radius: 5px;
+
+  background: #eeeeee;
+
+  color: #111111;
+
+  cursor: pointer;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 12px;
+}
+
+
+.supplier-page-number.active-page {
+  background: #b7d2e5;
+
+  font-weight: bold;
+}
+
+
+.supplier-page-arrow:hover:not(:disabled),
+.supplier-page-number:hover {
+  background: #cccccc;
+}
+
+
+.supplier-page-arrow:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   FOOTER
+   LOGO MOTOR TEPAT DI TENGAH
+===================================================== */
+
+.supplier-footer {
+  position: relative;
+
+  width: 100%;
+  height: 106px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 8px 45px;
+
+  background: #c5c5c5;
+
+  border-top: 1px solid #8f8f8f;
+
+  box-sizing: border-box;
+}
+
+/* FOOTER LEFT */
+
+.supplier-footer-left {
+  width: 33.33%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* LOGO KIRI */
+
+.supplier-footer-logo {
+  width: 90px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+/* LOGO MOTOR DI TENGAH */
+
+.supplier-footer-motor {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: block;
+
+  object-fit: contain;
+
+  margin: 0;
+  padding: 0;
+
+  filter: brightness(0);
+
+  box-sizing: border-box;
+}
+
+/* FOOTER CENTER */
+
+.supplier-footer-center {
+  width: 33.33%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FOOTER RIGHT */
+
+.supplier-footer-title {
+  width: 33.33%;
+
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  text-align: right;
+
+  color: #000000;
+
+  font-family: "Times New Roman", Times, serif;
+}
+
+.supplier-footer-title strong,
+.supplier-footer-title span {
+  font-size: 21px;
+
+  font-weight: bold;
+
+  line-height: 1.15;
+}
+
+/* RESPONSIVE 700px */
+
+@media (max-width: 700px) {
+  .supplier-footer {
+    height: 95px;
+    padding: 8px 20px;
+  }
+
+  .supplier-footer-logo {
+    width: 75px;
+  }
+
+  .supplier-footer-motor {
+    width: 55px;
+    height: 55px;
+  }
+
+  .supplier-footer-title strong,
+  .supplier-footer-title span {
+    font-size: 17px;
+  }
+}
+
+/* RESPONSIVE 500px */
+
+@media (max-width: 500px) {
+  .supplier-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .supplier-footer-logo {
+    width: 60px;
+  }
+
+  .supplier-footer-motor {
+    width: 45px;
+    height: 45px;
+  }
+
+  .supplier-footer-title strong,
+  .supplier-footer-title span {
+    font-size: 14px;
+  }
+}
+
+
+
+/* =====================================================
+   MODAL OVERLAY
+===================================================== */
+
+.supplier-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.supplier-modal {
+  width: 440px;
+
+  max-width: calc(100vw - 30px);
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================================
+   MODAL HEADER
+===================================================== */
+
+.supplier-modal-header {
+  width: 100%;
+
+  padding: 17px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0b1f3a;
+
+  color: #ffffff;
+}
+
+
+.supplier-modal-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+
+.supplier-modal-close {
+  border: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.supplier-form {
+  padding: 20px;
+}
+
+
+.supplier-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin-bottom: 14px;
+}
+
+
+.supplier-form-group label {
+  color: #222222;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+
+.supplier-form-group input,
+.supplier-form-group textarea {
+  width: 100%;
+
+  padding: 10px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #222222;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+}
+
+
+.supplier-form-group input:focus,
+.supplier-form-group textarea:focus {
+  border-color: #087ff5;
+
+  box-shadow:
+    0 0 0 2px rgba(8, 127, 245, 0.12);
+}
+
+
+.supplier-form-group textarea {
+  resize: vertical;
+}
+
+
+/* =====================================================
+   FORM BUTTON
+===================================================== */
+
+.supplier-form-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+
+.supplier-cancel-button,
+.supplier-save-button {
+  padding: 10px 16px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-family: "Times New Roman", Times, serif;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+
+.supplier-cancel-button {
+  background: #dddddd;
+
+  color: #333333;
+}
+
+
+.supplier-cancel-button:hover {
+  background: #cccccc;
+}
+
+
+.supplier-save-button {
+  background: #087ff5;
+
+  color: #ffffff;
+}
+
+
+.supplier-save-button:hover {
+  background: #066bcf;
+}
+
+
+/* =====================================================
+   RESPONSIVE 1200px
+===================================================== */
+
+@media (max-width: 1200px) {
+
+  .supplier-sidebar {
+    width: 245px;
+    min-width: 245px;
+  }
+
+  .supplier-sidebar-brand-text h2 {
+    font-size: 18px;
+  }
+
+  .supplier-menu-item {
+    font-size: 15px;
+  }
+
+  .supplier-search-box {
+    width: 330px;
+  }
+
+  .supplier-content-area {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE 1000px
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .supplier-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .supplier-sidebar-brand {
+    padding: 0 7px;
+
+    gap: 8px;
+  }
+
+  .supplier-sidebar-motor-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .supplier-sidebar-brand-text h2 {
+    font-size: 15px;
+  }
+
+  .supplier-sidebar-brand-text span {
+    font-size: 11px;
+  }
+
+  .supplier-menu-item {
+    font-size: 13px;
+
+    gap: 9px;
+  }
+
+  .supplier-menu-item img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .supplier-search-box {
+    width: 300px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE 800px
+===================================================== */
+
+@media (max-width: 800px) {
+
+  .supplier-sidebar {
+    width: 200px;
+    min-width: 200px;
+  }
+
+  .supplier-sidebar-brand-text h2 {
+    font-size: 14px;
+  }
+
+  .supplier-menu-item {
+    font-size: 12px;
+  }
+
+  .supplier-information-area {
+    min-height: 155px;
+  }
+
+  .supplier-search-box {
+    width: 300px;
+  }
+
+  .supplier-description p {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE 700px
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .supplier-sidebar {
+    width: 190px;
+    min-width: 190px;
+  }
+
+  .supplier-sidebar-brand-text h2 {
+    font-size: 13px;
+  }
+
+  .supplier-menu-item {
+    min-height: 40px;
+
+    font-size: 12px;
+  }
+
+  .supplier-top-header {
+    height: 70px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .supplier-top-header h1 {
+    font-size: 23px;
+  }
+
+  .supplier-content-area {
+    padding: 18px;
+  }
+
+  .supplier-profile-area {
+    min-width: 45px;
+
+    width: 45px;
+
+    padding: 4px;
+
+    justify-content: center;
+  }
+
+  .supplier-profile-info,
+  .supplier-profile-arrow {
+    display: none;
+  }
+
+  .supplier-information-area {
+    min-height: 180px;
+  }
+
+  .supplier-description {
+    top: 15px;
+    left: 18px;
+  }
+
+  .supplier-description p {
+    font-size: 15px;
+  }
+
+  .supplier-search-box {
+    left: 18px;
+
+    bottom: 18px;
+
+    width: calc(100% - 36px);
+  }
+
+  .supplier-add-button {
+    right: 18px;
+
+    top: 90px;
+
+    bottom: auto;
+  }
+
+  .supplier-table-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .supplier-table {
+    min-width: 850px;
+  }
+
+  .supplier-footer {
+    height: 95px;
+
+    padding: 8px 20px;
+  }
+
+  .supplier-footer-logo {
+    width: 75px;
+  }
+
+  .supplier-footer-motor {
+    width: 55px;
+    height: 55px;
+  }
+
+  .supplier-footer-title {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE 500px
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .supplier-sidebar {
+    width: 70px;
+    min-width: 70px;
+
+    padding: 15px 6px;
+  }
+
+  .supplier-sidebar-brand {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .supplier-sidebar-motor-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .supplier-sidebar-brand-text {
+    display: none;
+  }
+
+  .supplier-sidebar-line {
+    width: 90%;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .supplier-menu-item {
+    justify-content: center;
+
+    padding: 8px;
+
+    gap: 0;
+  }
+
+  .supplier-menu-item span {
+    display: none;
+  }
+
+  .supplier-sidebar-bottom-logo {
+    display: none;
+  }
+
+  .supplier-header-right {
+    gap: 5px;
+  }
+
+  .supplier-notification-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .supplier-content-area {
+    padding: 15px;
+  }
+
+  .supplier-information-area {
+    min-height: 190px;
+  }
+
+  .supplier-add-button {
+    min-width: 140px;
+  }
+
+  .supplier-table-container {
+    margin-top: 15px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .supplier-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+}
